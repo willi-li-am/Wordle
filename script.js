@@ -128,6 +128,9 @@ function checkWord(e){
                         }
                     }else grid[currentRow][i].classList.add('incorrect');
                 }
+                for(let i = 0; i < 5; i++){
+                    if(!grid[currentRow][i].classList.contains('correct') && !grid[currentRow][i].classList.contains('incorrect') && !grid[currentRow][i].classList.contains('contains')) grid[currentRow][i].classList.add('incorrect');
+                }
                 currentRow++;
                 letterNumber = 0;
             }
