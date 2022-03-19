@@ -1,0 +1,45 @@
+#game{
+    display: grid;
+    grid-gap: 0px;
+    padding: 10px;
+    width: 330px;
+    height: 400px;
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+    font: bold 75px Arial;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.row{
+    background-color: none;
+    width: 330px;
+    height: 62px;
+    display: grid;
+    grid-template-columns: 66px 66px 66px 66px 66px;
+}
+
+.letter{
+    background-color: white;
+    width: 58px;
+    height: 58px;
+    border: 2px black solid;
+    text-align: center;
+    font: bold 40px Arial;
+    line-height: 58px;
+}
+
+.letter.correct{
+    background-color: greenyellow;
+}
+
+.letter.contains{
+    background-color: yellow;
+}
+
+.letter.incorrect{
+    background-color: lightgrey;
+}
