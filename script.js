@@ -106,7 +106,7 @@ function randomNumber(min, max){
     return Math.floor(Math.random() * max) + min;
 }
 
-var wotd = 'plead'//answers[randomNumber(0, 2314)]
+var wotd = answers[randomNumber(0, 2314)]
 
 function checkWord(e){
     if(e.key == 'Enter'){
