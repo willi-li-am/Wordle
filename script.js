@@ -85,6 +85,16 @@ function getIndexOfCorrectAnswers(answer, word){
     return indexes
 }
 
+function correctAnswerCount(arr, index, value){
+    let num = 0
+    for(let i = 0; i < index.length; i++){
+        if(arr[index[i]] == value){
+            num++
+        }
+    }
+    return num
+}
+
 /*const day = new Date()
 
 const date1 = new Date('6/16/2021')
@@ -96,7 +106,7 @@ function randomNumber(min, max){
     return Math.floor(Math.random() * max) + min;
 }
 
-var wotd = answers[randomNumber(0, 2314)]
+var wotd = 'plead'//answers[randomNumber(0, 2314)]
 
 function checkWord(e){
     if(e.key == 'Enter'){
@@ -119,7 +129,8 @@ function checkWord(e){
                     else if(answer.includes(word[i])){
                         let wordCount = ltrCntWord[word[i]]
                         let answerCount = ltrCntAnsw[word[i]]
-                        let goodAnswersCount = getIndexOfCorrectAnswers(answer, word)
+                        let goodAnswersIndex = getIndexOfCorrectAnswers(answer, word)
+                        let goodAnswersCount = correctAnswerCount(answer, goodAnswersIndex, word[i])
                         if (wordCount == answerCount) grid[currentRow][i].classList.add('contains');
                         else {
                             let indexes = getAllIndexes(word, word[i])
