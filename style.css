@@ -78,3 +78,10 @@ body{background-color: var(--color-tone-7);}
     width: 62px;
     height: 62px;
 }
+
+#answer{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font: bold 20px Arial;
+}
