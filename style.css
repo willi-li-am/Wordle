@@ -79,7 +79,7 @@ body{background-color: var(--color-tone-7);}
     height: 62px;
 }
 
-#answer{
+#answer, #used{
     margin-top: 20px;
     text-align: center;
     color: white;

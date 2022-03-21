@@ -4,6 +4,7 @@ var wordList = ["aahed","aalii","aargh","aarti","abaca","abaci","abacs","abaft",
 
 const game = document.getElementById('game');
 const answerShow = document.querySelector('#answer')
+const used = document.querySelector('#used')
 
 var grid = [];
 function createGrid(){
@@ -108,6 +109,8 @@ function randomNumber(min, max){
 
 var wotd = answers[randomNumber(0, 2314)]
 
+var usedLetters = new Array
+
 function checkWord(e){
     if(e.key == 'Enter'){
         let word = turnLettersToWord();
@@ -148,12 +151,17 @@ function checkWord(e){
                 }
                 for(let i = 0; i < 5; i++){
                     if(!grid[currentRow][i].classList.contains('correct') && !grid[currentRow][i].classList.contains('incorrect') && !grid[currentRow][i].classList.contains('contains')) grid[currentRow][i].classList.add('incorrect');
+                    if(grid[currentRow][i].classList.contains('incorrect')){
+                        if(!usedLetters.includes(grid[currentRow][i].innerText))
+                        usedLetters.push(grid[currentRow][i].innerText)
+                    }
                 }
                 currentRow++;
                 letterNumber = 0;
+                used.innerText = `Incorrect Letters: ${usedLetters}`
             }
-        }if(currentRow >= 6 && wotd != word){
-            answerShow.innerText =  `The answer was: ${wotd}`
+        }if(currentRow == 6 && wotd != word){
+            answerShow.innerText =  `The answer was: ${wotd[0].toUpperCase()+wotd.slice(1)}`
         }
     }
 }
