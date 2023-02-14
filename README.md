@@ -8,5 +8,5 @@ To play said Wordle visit: https://trollermaner.github.io/Wordle/
 Instructions: 
 1. Use keyboard to write letters
 2. Press "Enter" after writing a 5 letter word
-3. If nothing happens: Either the word does not exist or Not all 5 boxes are filled
+3. If nothing happens: Either the word does not exist or some boxes are in the row are empty
 4. Guess the word
