@@ -3,7 +3,7 @@
 This is a simple wordle clone, words used in this code derive straight from the Wordle source code.
 Warning! Code is very dirty!
 
-To play said Wordle visit: https://trollermaner.github.io/Wordle/
+To play said Wordle visit: https://willi-li-am.github.io/Wordle/
 
 Instructions: 
 1. Use keyboard to write letters
